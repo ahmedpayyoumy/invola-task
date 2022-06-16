@@ -21,4 +21,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('add-store', [\App\Http\Controllers\StoresController::class, 'addStore']);
     Route::post('set-vat', [\App\Http\Controllers\VatController::class, 'setVat']);
     Route::post('set-shipping', [\App\Http\Controllers\ShippingController::class, 'setShipping']);
+    Route::post('set-product', [\App\Http\Controllers\ProductsController::class, 'setProduct']);
+    Route::post('add-to-cart', [\App\Http\Controllers\CartsController::class, 'addToCart']);
+    Route::post('calculate-cart', [\App\Http\Controllers\CartsController::class, 'calculateCart']);
 });

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ShippingController extends Controller
 {
-    // Set VAT value for store
+    // Set Shipping value for store
     public function setShipping(Request $request)
     {
         // Validation Rules

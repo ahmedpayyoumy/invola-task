@@ -18,7 +18,7 @@ class VatController extends Controller
             [
                 'store_id' => ['required', 'exists:stores,id'],
                 'type' => ['required', 'in:0,1'],
-                'value' => ['required']
+                'value' => ['required', 'between:0,100']
             ]
         );
 
