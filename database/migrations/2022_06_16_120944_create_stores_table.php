@@ -19,8 +19,8 @@ class CreateStoresTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->mediumText('address')->nullable();
             $table->integer('phone')->nullable();
-            $table->tinyInteger('VAT')->default(0)->nullable();
-            $table->tinyInteger('shipping')->default(0)->nullable();
+            $table->tinyInteger('VAT')->default(1);
+            $table->tinyInteger('shipping')->default(0);
             $table->timestamps();
         });
     }

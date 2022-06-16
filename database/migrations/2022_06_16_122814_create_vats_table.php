@@ -17,7 +17,7 @@ class CreateVatsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('store_id');
             $table->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');
-            $table->tinyInteger('type');
+            $table->tinyInteger('type')->comment('0 is product\'s price and 1 is percentage' );
             $table->integer('value');
             $table->timestamps();
         });

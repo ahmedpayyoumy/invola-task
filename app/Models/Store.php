@@ -33,6 +33,16 @@ class Store extends Model
         return $this->hasMany(Product::class);
     }
 
+    public function isVatEnabled()
+    {
+        return ($this['VAT'] == 1);
+    }
+
+    public function isShippingEnabled()
+    {
+        return ($this['shipping'] == 1);
+    }
+
     public function vat()
     {
         return $this->hasOne(Vat::class);
